@@ -41,10 +41,13 @@ export default async function handler(req, res) {
   // Log env var
   console.log("CLIMATIQ_KEY:", process.env.CLIMATIQ_KEY);
 
-  const payload = {
-    emission_factor: { activity_id: "electricity-energy_source_grid_mix" },
-    parameters: { energy, energy_unit }
-  };
+const payload = {
+  emission_factor: {
+    activity_id: "electricity-energy_source_grid_mix",
+    data_version: "28.28"
+  },
+  parameters: { energy, energy_unit }
+};
 
   try {
     console.log("SENDING PAYLOAD:", payload);
