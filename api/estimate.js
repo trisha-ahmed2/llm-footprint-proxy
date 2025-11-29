@@ -43,10 +43,13 @@ export default async function handler(req, res) {
 
 const payload = {
   emission_factor: {
-    activity_id: "electricity-energy_source_grid_mix",
+    activity_id: "electricity-generation_mix",
     data_version: "28.28"
   },
-  parameters: { energy, energy_unit }
+  parameters: {
+    energy,
+    energy_unit
+  }
 };
 
   try {
