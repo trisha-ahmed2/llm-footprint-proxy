@@ -49,7 +49,7 @@ export default async function handler(req, res) {
   try {
     console.log("SENDING PAYLOAD:", payload);
 
-    const climatiqRes = await fetch("https://beta3.api.climatiq.io/estimate", {
+    const climatiqRes = await fetch("https://api.climatiq.io/estimate", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.CLIMATIQ_KEY}`,
